@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent's</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="main.js"> -->
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="image\download.png" alt="" width="150px" class="moqups">
+           <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#package" class="package">Our Package</a>
+                <a href="#call">Call Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+
+    <main id="home">
+        <!-- section judul -->
+        <section id="travel">
+            <div>
+                <div class="moto">
+                    <h1>Your Trusted Travel Agent's</h1>
+                    <h3 class="moto-kalimat">Your happiness is our happiness</h3><br><br>
+                </div>
+            </div>
+        </section>
+
+        <!-- section about-contact -->
+        <section id="about-contact">
+            <div class="container1">
+                <div class="about-contact">
+                    <!-- about -->
+                    <div class="about">
+                        
+                        <div class="mySlides fade">
+                            <img src="image\about.jpg" alt="about" width="470px" height="300px">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="image\jepang.jpg" alt="jepang" width="470px" height="300px">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="image\singapura.jpg" alt="singapura" width="470px" height="300px">
+                        </div>
+
+                        <div class="about-content">
+                            <div class="content-caption">
+                                <p><i>"Liburan jadi menyenangkan bersama Travel Agentku"</i>
+                            </div>
+                            <div class="content-person">
+                                <img src="https://png.pngitem.com/pimgs/s/111-1114675_user-login-person-man-enter-person-login-icon.png" alt="person" width="40px" height="40px">
+                                <div class="person-info">
+                                    <h4>Florence Hughes</h4>
+                                    <p> <i>Ibu Rumah Tangga, 28</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="about-information">
+                            <h4>Use this space to provide user with more information about your offer.
+                                Consider it a follow-up to your headline and explain the benefits
+                                of your service of product</h4>
+                            <ul>
+                                <li>
+                                    <h4 class="number-list">1</h4>
+                                    <p>Your first feature, written in the form of a benefit statement.</p>
+                                </li>
+                                <li>
+                                    <h4 class="number-list">2</h4>
+                                    <p>Your second feature, written in the form of a benefit statement.</p>
+                                </li>
+                                <li>
+                                    <h4 class="number-list">3</h4>
+                                    <p>Your thrid feature, written in the form of a benefit statement.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- contact -->
+                    <div class="contact">
+                        <div class="card">
+                            <div class="card-tittle">
+                                <h3>Contact Us</h3>
+                                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p><br><br>
+                            </div>
+                            <form name="contact-input" class="contact-us" onsubmit="return validateForm()">
+                                <div class="biodata">
+                                    <label for="name"> <b>Your Name:</b></label><br>
+                                    <input type="text" name="fname" id="name" placeholder="First and last name"><br><br>
+            
+                                    <label for="email"><b>Email Addres:</b></label><br>
+                                    <input type="text" name="email" id="email" placeholder="example@email.com"><br><br>
+                                
+                                    <label for="interested"><b>What are you interested in?</b></label><br>
+                                    <select name="city" id="city">
+                                        <option value="" disabled selected>Select option</option>
+                                        <option value="bali">Bali</option>
+                                        <option value="japan">Japan</option>
+                                        <option value="singapore">Singapore</option>
+                                        <option value="bandung">Bandung</option>
+                                        <option value="surabaya">Surabaya</option>
+                                    </select><br><br>
+                                </div>
+                                <input type="submit" value="SEND" class="send">
+                            </form>
+
+                            <script>
+                                // slide gambar
+                                let slideIndex = 0;
+                                    showSlides();
+                                        function showSlides() {
+                                            let i;
+                                            let slides = document.getElementsByClassName("mySlides");
+
+                                            for (i = 0; i < slides.length; i++) {
+                                                slides[i].style.display = "none";
+                                            }
+                                            slideIndex++;
+                                            if (slideIndex > slides.length) {slideIndex = 1}
+
+                                            slides[slideIndex-1].style.display = "block";
+
+                                            setTimeout(showSlides, 3000); // Change image every 2 seconds
+                                        }
+                                    
+                                    // input form
+                                    function validateForm(){
+                                        var name = document.forms['contact-input']['fname'].value;
+                                        var email = document.forms['contact-input']['email'].value;
+                                        var city = document.forms['contact-input']['city'].value;
+
+                                    if (name == '' || email == '' || city == '') {
+                                        alert('Tolong Lengkapi Data');
+                                        return false;
+                                    } else {
+                                         alert('Terima Kasih, Permintaan Anda Akan di Prosess');
+                                        return true;
+                                    }
+
+                                    }
+                                    
+                            </script>
+
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+        <!-- Section package -->
+        <section id="package">
+            <div class="our-package">
+                <h2>OUR PACKAGE</h2>
+            </div>
+        </section>
+
+        <!-- Section  -->
+        <section>
+            <div class="place">
+                <!-- class bali -->
+                <div class="bali">
+                    <img src="image\place.png" alt="" width="40px" height="33px">
+                    <div class="bali-info">
+                        <h3>Bali</h3>
+                        <p>Travel dan wisata di Bali. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                    </div>
+                    
+                    <img src="image\place.png" alt="" width="40px" height="33px">
+                    <div class="bali-info">
+                        <h3>Japan</h3>
+                        <p>Travel dan wisata di Japan. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                    </div>            
+
+                    <img src="image\place.png" alt="" width="40px" height="33px">
+                    <div class="bali-info">
+                        <h3>Singapore</h3>
+                        <p>Travel and tours in Singapore. Visit interesting cultural and culinary heritage.</p>
+                    </div>
+                </div>
+
+                <br><br><hr><br><br>
+
+                <!-- class bandung -->
+                <div class="bandung">
+                    <img src="image\place.png" alt="" width="35px" height="33px">
+                    <div class="bandung-info">
+                        <h3>Bandung</h3>
+                        <p>Travel dan wisata di Bandung. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                    </div>
+
+                    <img src="image\place.png" alt="" width="35px" height="33px">
+                    <div class="bandung-info">
+                        <h3>Surabaya</h3>
+                        <p>Travel dan wisata di Surabaya. Kunjungi cagar budaya dan kuliner yang menarik.</p>
+                    </div>
+
+                    <img src="image\place.png" alt="" width="35px" height="33px">
+                    <div class="bandung-info">
+                        <h3>Third Feature</h3>
+                        <p>This description supports and extends the bullet point above.</p>
+                    </div>
+                </div>
+
+                <br><br><br>
+
+            </div>
+        </section>
+
+        <!-- section headline -->
+        <section id="call">
+            <div class="headline">
+                <br><br>
+                    <h2>Your Closing Argument Headline</h2>
+                    <p>Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed
+                        justo quis, convallis tincidunt risus. Phasellus fringilla odio vel erat fringilla.
+                    </p>
+                    <input type="submit" value="CALL TO ACTION">
+                <br><br><br><br>
+            </div>
+        </section>
+
+        <!-- section moqups -->
+        <section>
+            <div class="footer">
+                <img src="image\download.png" alt="" width="130px" class="moqups1">
+                <div class="terms">
+                    <p>Terms of Service</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="terms">
+                    <p> &copy; 2019</p>
+                    <p>Moqups</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+</html>
